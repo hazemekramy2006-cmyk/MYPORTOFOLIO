@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="assets/logo/f9e8cfc1-abec-42e5-a8e1-66930902cc37.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Hazem Ekramy - Creative Solutions</title>
+  <meta name="description" content="Premium creative services by Hazem Ekramy: Brand Identity, Logo Design, Social Media, Flutter Development, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+  <div class="loader-overlay">
+    <div class="loader-text">Loading</div>
+    <div class="loader-bar-container">
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <div class="page-transition">
+    <div class="page-transition-panel"></div>
+    <div class="page-transition-panel"></div>
+    <div class="page-transition-panel"></div>
+    <div class="page-transition-panel"></div>
+    <div class="page-transition-panel"></div>
+  </div>
+
+  <canvas id="bg-canvas" class="bg-canvas"></canvas>
+  <div class="bg-noise"></div>
+
+  <nav class="nav-main">
+    <a href="index.html" class="nav-logo">Hazem</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link"><span class="nav-num">01</span>Home</a></li>
+      <li><a href="about.html" class="nav-link"><span class="nav-num">02</span>About</a></li>
+      <li><a href="projects.html" class="nav-link"><span class="nav-num">03</span>Projects</a></li>
+      <li><a href="services.html" class="nav-link active"><span class="nav-num">04</span>Services</a></li>
+      <li><a href="experience.html" class="nav-link"><span class="nav-num">05</span>Experience</a></li>
+      <li><a href="contact.html" class="nav-link"><span class="nav-num">06</span>Contact</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button class="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon theme-icon"></i>
+      </button>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Services Hero -->
+  <section class="hero-section" style="min-height: 60vh;">
+    <div class="floating-obj floating-obj-1" style="width:300px; height:300px; background:var(--accent);"></div>
+    <div class="floating-obj floating-obj-2" style="width:250px; height:250px; background:var(--primary);"></div>
+    <div class="hero-content">
+      <p class="hero-greeting">What I Offer</p>
+      <h1 class="hero-name">Services</h1>
+      <p class="hero-title">Premium creative solutions tailored to your needs</p>
+    </div>
+  </section>
+
+  <!-- All Services -->
+  <section class="section">
+    <div class="section-header reveal">
+      <span class="section-label">Expertise</span>
+      <h2 class="section-title">Creative <span>Services</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-card-inner">
+          <div class="service-card-front">
+            <div class="service-icon"><i class="fas fa-fingerprint"></i></div>
+            <div>
+              <h3>Brand Identity Design</h3>
+              <p>Complete visual identity systems including logos, color palettes, typography, and brand guidelines that create lasting impressions and build brand recognition.</p>
+            </div>
+            <span class="service-number">01</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-card-inner">
+          <div class="service-card-front">
+            <div class="service-icon"><i class="fas fa-shapes"></i></div>
+            <div>
+              <h3>Logo Design</h3>
+              <p>Custom logo designs that capture your brand essence. From minimalist marks to detailed illustrations, each logo is crafted to be memorable and versatile.</p>
+            </div>
+            <span class="service-number">02</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-card-inner">
+          <div class="service-card-front">
+            <div class="service-icon"><i class="fas fa-share-alt"></i></div>
+            <div>
+              <h3>Social Media Design</h3>
+              <p>Engaging visual content optimized for all platforms. Posts, stories, carousels, and covers that drive engagement and build your online presence.</p>
+            </div>
+            <span class="service-number">03</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-4">
+        <div class="service-card-inner">
+          <div class="service-card-front">
+            <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+            <div>
+              <h3>Marketing Design</h3>
+              <p>High-impact promotional materials including banners, flyers, brochures, and digital ads designed to convert viewers into customers.</p>
+            </div>
+            <span class="service-number">04</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-card-inner">
+          <div class="service-card-front">
+            <div class="service-icon"><i class="fas fa-image"></i></div>
+            <div>
+              <h3>Poster & Advertising Design</h3>
+              <p>Eye-catching posters and advertising materials with bold compositions, striking typography, and visual hierarchy that commands attention.</p>
+            </div>
+            <span class="service-number">05</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-card-inner">
+          <div class="service-card-front">
+            <div class="service-icon"><i class="fas fa-camera-retro"></i></div>
+            <div>
+              <h3>Visual Content Creation</h3>
+              <p>Compelling visual storytelling through custom graphics, illustrations, and photo compositions that communicate your message effectively.</p>
+            </div>
+            <span class="service-number">06</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-card-inner">
+          <div class="service-card-front">
+            <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+            <div>
+              <h3>UI Design</h3>
+              <p>User-centered interface design with focus on usability, accessibility, and modern aesthetics. Wireframes, prototypes, and high-fidelity designs.</p>
+            </div>
+            <span class="service-number">07</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-4">
+        <div class="service-card-inner">
+          <div class="service-card-front">
+            <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+            <div>
+              <h3>Flutter Mobile App Development</h3>
+              <p>Modern cross-platform mobile applications built with Flutter. Smooth interfaces, responsive layouts, and scalable architecture for iOS and Android.</p>
+            </div>
+            <span class="service-number">08</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="section">
+    <div class="section-header reveal">
+      <span class="section-label">Workflow</span>
+      <h2 class="section-title">My <span>Process</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="glass-card reveal reveal-delay-1" style="text-align:center;">
+        <div class="service-icon" style="margin:0 auto 1.5rem;"><i class="fas fa-search"></i></div>
+        <h3 style="font-family:var(--font-display); margin-bottom:1rem;">01. Discovery</h3>
+        <p style="color:var(--text-secondary); line-height:1.7;">Understanding your goals, audience, and brand vision through detailed research and consultation.</p>
+      </div>
+      <div class="glass-card reveal reveal-delay-2" style="text-align:center;">
+        <div class="service-icon" style="margin:0 auto 1.5rem;"><i class="fas fa-pencil-ruler"></i></div>
+        <h3 style="font-family:var(--font-display); margin-bottom:1rem;">02. Design</h3>
+        <p style="color:var(--text-secondary); line-height:1.7;">Creating concepts and refining designs through iterative feedback and creative exploration.</p>
+      </div>
+      <div class="glass-card reveal reveal-delay-3" style="text-align:center;">
+        <div class="service-icon" style="margin:0 auto 1.5rem;"><i class="fas fa-code"></i></div>
+        <h3 style="font-family:var(--font-display); margin-bottom:1rem;">03. Development</h3>
+        <p style="color:var(--text-secondary); line-height:1.7;">Building and implementing the final solution with attention to detail and quality standards.</p>
+      </div>
+      <div class="glass-card reveal reveal-delay-4" style="text-align:center;">
+        <div class="service-icon" style="margin:0 auto 1.5rem;"><i class="fas fa-rocket"></i></div>
+        <h3 style="font-family:var(--font-display); margin-bottom:1rem;">04. Delivery</h3>
+        <p style="color:var(--text-secondary); line-height:1.7;">Finalizing, testing, and delivering the project with all assets and documentation ready.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align:center;">
+    <div class="glass-card reveal" style="max-width:700px; margin:0 auto;">
+      <h2 style="font-family:var(--font-display); font-size:2rem; margin-bottom:1rem;">Ready to Start?</h2>
+      <p style="color:var(--text-secondary); margin-bottom:2rem; line-height:1.7;">Let's collaborate to bring your creative vision to life. Whether it's a brand identity, mobile app, or marketing campaign, I'm here to help.</p>
+      <a href="contact.html" class="btn-primary"><span>Start a Project</span> <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <div class="footer-brand">Hazem Ekramy</div>
+        <p class="footer-text">Graphic Designer & Flutter Developer</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-text">© 2026 Hazem Ekramy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/201069590884" class="whatsapp-float" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

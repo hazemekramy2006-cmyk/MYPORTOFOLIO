@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="assets/logo/f9e8cfc1-abec-42e5-a8e1-66930902cc37.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Hazem Ekramy - Portfolio</title>
+  <meta name="description" content="Explore 25+ creative design projects by Hazem Ekramy including branding, social media, posters, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+  <div class="loader-overlay">
+    <div class="loader-text">Loading</div>
+    <div class="loader-bar-container">
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <div class="page-transition">
+    <div class="page-transition-panel"></div>
+    <div class="page-transition-panel"></div>
+    <div class="page-transition-panel"></div>
+    <div class="page-transition-panel"></div>
+    <div class="page-transition-panel"></div>
+  </div>
+
+  <canvas id="bg-canvas" class="bg-canvas"></canvas>
+  <div class="bg-noise"></div>
+
+  <nav class="nav-main">
+    <a href="index.html" class="nav-logo">Hazem</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link"><span class="nav-num">01</span>Home</a></li>
+      <li><a href="about.html" class="nav-link"><span class="nav-num">02</span>About</a></li>
+      <li><a href="projects.html" class="nav-link active"><span class="nav-num">03</span>Projects</a></li>
+      <li><a href="services.html" class="nav-link"><span class="nav-num">04</span>Services</a></li>
+      <li><a href="experience.html" class="nav-link"><span class="nav-num">05</span>Experience</a></li>
+      <li><a href="contact.html" class="nav-link"><span class="nav-num">06</span>Contact</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button class="theme-toggle" aria-label="Toggle dark/light mode">
+        <i class="fas fa-moon theme-icon"></i>
+      </button>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Projects Hero -->
+  <section class="hero-section" style="min-height: 60vh;">
+    <div class="floating-obj floating-obj-1" style="width:350px; height:350px; background:var(--secondary);"></div>
+    <div class="floating-obj floating-obj-2" style="width:280px; height:280px; background:var(--accent);"></div>
+    <div class="hero-content">
+      <p class="hero-greeting">Creative Portfolio</p>
+      <h1 class="hero-name">My Projects</h1>
+      <p class="hero-title">25+ designs across branding, social media, and creative work</p>
+    </div>
+  </section>
+
+  <!-- Projects Gallery -->
+  <section class="section">
+    <div class="section-header reveal">
+      <span class="section-label">Portfolio</span>
+      <h2 class="section-title">Project <span>Gallery</span></h2>
+      <div class="divider"></div>
+    </div>
+
+    <!-- Filters -->
+    <div class="project-filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="branding">Branding</button>
+      <button class="filter-btn" data-filter="social">Social Media</button>
+      <button class="filter-btn" data-filter="posters">Posters</button>
+      <button class="filter-btn" data-filter="creative">Creative</button>
+    </div>
+
+    <!-- 3D Carousel -->
+    <div class="projects-carousel-wrapper reveal">
+      <div class="projects-carousel">
+        <div class="project-card" data-category="branding">
+          <img src="assets/image portofolio/ENG  Hazem Ekramy.png" alt="Project 1" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Branding</span>
+            <h3>Brand Identity System</h3>
+            <p>Complete visual identity including logo, colors, and typography.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="social">
+          <img src="assets/image portofolio/010.png" alt="Project 2" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Social Media</span>
+            <h3>Social Media Campaign</h3>
+            <p>Engaging visual content for digital marketing campaigns.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="creative">
+          <img src="assets/بوستات الخطه/بوست1.png" alt="Project 3" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Creative</span>
+            <h3>Creative Visual Design</h3>
+            <p>Innovative design concepts pushing creative boundaries.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="posters">
+          <img src="assets/بوستات الخطه/بوست 2.png" alt="Project 4" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Poster</span>
+            <h3>Advertising Poster</h3>
+            <p>High-impact promotional material for marketing campaigns.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="branding">
+          <img src="assets/بوستات الخطه/بوست 3.png" alt="Project 5" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Branding</span>
+            <h3>Logo Collection</h3>
+            <p>Minimalist and modern logo designs for various brands.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="social">
+          <img src="assets/بوستات الخطه/بوست 4.png" alt="Project 6" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Social Media</span>
+            <h3>Instagram Feed Design</h3>
+            <p>Cohesive visual storytelling across social platforms.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="posters">
+          <img src="assets/بوستات الخطه/بوست 5 (2).png" alt="Project 7" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Poster</span>
+            <h3>Event Poster</h3>
+            <p>Eye-catching event promotion with bold typography.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="creative">
+          <img src="assets/بوستات الخطه/بوست 6.png" alt="Project 8" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Creative</span>
+            <h3>Abstract Art Direction</h3>
+            <p>Experimental visual compositions and art direction.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="branding">
+          <img src="assets/بوستات خطه TST/19_2بوست الاعلان عن رودماب الفرونت.png" alt="Project 9" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Branding</span>
+            <h3>Business Card Design</h3>
+            <p>Professional business card designs with premium feel.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="social">
+          <img src="assets/00/COFFEE.png" alt="Project 10" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Social Media</span>
+            <h3>Facebook Cover Design</h3>
+            <p>Brand-consistent social media cover designs.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="posters">
+          <img src="assets/00/pizzzaa.png" alt="Project 11" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Poster</span>
+            <h3>Product Promotion</h3>
+            <p>Product-focused promotional poster design.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="creative">
+          <img src="assets/00/HEADPHONE.png" alt="Project 12" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Creative</span>
+            <h3>Digital Illustration</h3>
+            <p>Custom digital illustrations and artwork.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="branding">
+          <img src="assets/00/T W S T.png" alt="Project 13" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Branding</span>
+            <h3>Brand Stationery</h3>
+            <p>Complete stationery suite including letterhead and envelope.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="social">
+          <img src="assets/تسويق عقاري/1.png" alt="Project 14" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Social Media</span>
+            <h3>Story Templates</h3>
+            <p>Instagram story templates with engaging layouts.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="posters">
+          <img src="assets/تسويق عقاري/2.png" alt="Project 15" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Poster</span>
+            <h3>Movie Poster Concept</h3>
+            <p>Cinematic poster design with dramatic composition.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="creative">
+          <img src="assets/image portofolio/2.png" alt="Project 16" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Creative</span>
+            <h3>Typography Art</h3>
+            <p>Typography-focused creative artwork and compositions.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="branding">
+          <img src="assets/image portofolio/photo_6048579087384645255_w.jpg" alt="Project 17" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Branding</span>
+            <h3>Brand Guidelines</h3>
+            <p>Comprehensive brand style guide documentation.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="social">
+          <img src="assets/image portofolio/EXPLORE THE WORLD.png" alt="Project 18" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Social Media</span>
+            <h3>Marketing Carousel</h3>
+            <p>Multi-slide carousel designs for social marketing.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="posters">
+          <img src="assets/OLYMPIA/olympia test.png" alt="Project 19" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Poster</span>
+            <h3>Restaurant Menu Design</h3>
+            <p>Elegant menu design with premium typography.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="creative">
+          <img src="assets/Untitled (Instagram Post (45)) quiz.png" alt="Project 20" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Creative</span>
+            <h3>3D Mockup Design</h3>
+            <p>Realistic 3D product mockups and presentations.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="branding">
+          <img src="assets/Untitled (Instagram Post (45)).png" alt="Project 21" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Branding</span>
+            <h3>Packaging Design</h3>
+            <p>Product packaging with brand-consistent visuals.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="social">
+          <img src="assets/BURGER.png" alt="Project 22" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Social Media</span>
+            <h3>YouTube Thumbnail</h3>
+            <p>Click-worthy thumbnail designs for video content.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="posters">
+          <img src="assets/Gazelle.png" alt="Project 23" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Poster</span>
+            <h3>Music Album Cover</h3>
+            <p>Artistic album cover design with visual storytelling.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="creative">
+          <img src="assets/samba.png" alt="Project 24" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Creative</span>
+            <h3>Infographic Design</h3>
+            <p>Data visualization with engaging visual elements.</p>
+          </div>
+        </div>
+        <div class="project-card" data-category="branding">
+          <img src="assets/مفيش غير سيخ الشاورما.png" alt="Project 25" >
+          <div class="project-card-overlay">
+            <span class="project-card-tag">Branding</span>
+            <h3>Brand Mockup</h3>
+            <p>Realistic brand application mockups and presentations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Branding Case Study -->
+  <section class="section">
+    <div class="section-header reveal">
+      <span class="section-label">Case Study</span>
+      <h2 class="section-title">Complete Brand <span>Identity</span></h2>
+      <div class="divider"></div>
+      <p class="section-desc">A deep dive into one complete brand identity project showcasing 10 design elements</p>
+    </div>
+    <div class="branding-case-study reveal">
+      <div class="branding-grid">
+        <div class="branding-item">
+          <img src="assets/هويه بصريه كامله ل محل ملابس حريمي/1.png" alt="Logo Design" >
+          <div class="branding-item-label">Logo</div>
+        </div>
+        <div class="branding-item">
+          <img src="assets/هويه بصريه كامله ل محل ملابس حريمي/2.png" alt="Color Palette" >
+          <div class="branding-item-label">Color Palette</div>
+        </div>
+        <div class="branding-item">
+          <img src="assets/هويه بصريه كامله ل محل ملابس حريمي/3.png" alt="Typography" >
+          <div class="branding-item-label">Typography</div>
+        </div>
+        <div class="branding-item">
+          <img src="assets/هويه بصريه كامله ل محل ملابس حريمي/4.png" alt="Business Card" >
+          <div class="branding-item-label">Business Card</div>
+        </div>
+        <div class="branding-item">
+          <img src="assets/هويه بصريه كامله ل محل ملابس حريمي/5.png" alt="Letterhead" >
+          <div class="branding-item-label">Letterhead</div>
+        </div>
+        <div class="branding-item">
+          <img src="assets/هويه بصريه كامله ل محل ملابس حريمي/6.png" alt="Social Media Kit" >
+          <div class="branding-item-label">Social Media Kit</div>
+        </div>
+        <div class="branding-item">
+          <img src="assets/هويه بصريه كامله ل محل ملابس حريمي/7.png" alt="Brand Guidelines" >
+          <div class="branding-item-label">Brand Guidelines</div>
+        </div>
+        <div class="branding-item">
+          <img src="assets/هويه بصريه كامله ل محل ملابس حريمي/8.png" alt="Packaging Mockup" >
+          <div class="branding-item-label">Packaging Mockup</div>
+        </div>
+        <div class="branding-item">
+          <img src="assets/هويه بصريه كامله ل محل ملابس حريمي/9.png" alt="App Icon" >
+          <div class="branding-item-label">App Icon</div>
+        </div>
+        <div class="branding-item">
+          <img src="assets/هويه بصريه كامله ل محل ملابس حريمي/10.png" alt="Brand Applications" >
+          <div class="branding-item-label">Brand Applications</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <div class="footer-brand">Hazem Ekramy</div>
+        <p class="footer-text">Graphic Designer & Flutter Developer</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-text">© 2026 Hazem Ekramy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/201069590884" class="whatsapp-float" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
