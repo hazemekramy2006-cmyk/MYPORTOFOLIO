@@ -383,9 +383,9 @@ function initContactForm() {
   };
 
   // Check if credentials are still placeholders
-  if (EMAILJS_CONFIG.publicKey === 'YOUR_PUBLIC_KEY_HERE' ||
-      EMAILJS_CONFIG.serviceId === 'YOUR_SERVICE_ID_HERE' ||
-      EMAILJS_CONFIG.templateId === 'YOUR_TEMPLATE_ID_HERE') {
+  if (EMAILJS_CONFIG.publicKey === 'eYKXtsYP5vAQpKmnt' ||
+      EMAILJS_CONFIG.serviceId === 'service_4btme5c' ||
+      EMAILJS_CONFIG.templateId === 'template_ad5aie9') {
     console.warn('EmailJS: Please configure your credentials in script.js before using the contact form.');
     // Still attach the form handler but show a helpful message
     form.addEventListener('submit', (e) => {
