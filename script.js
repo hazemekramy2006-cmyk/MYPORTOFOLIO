@@ -377,9 +377,9 @@ function initContactForm() {
   // 5. Replace the values below with your actual credentials
 
   const EMAILJS_CONFIG = {
-    publicKey: 'YOUR_PUBLIC_KEY_HERE',     // Replace with your Public Key from EmailJS Account > API Keys
-    serviceId: 'YOUR_SERVICE_ID_HERE',     // Replace with your Service ID from Email Services
-    templateId: 'YOUR_TEMPLATE_ID_HERE'   // Replace with your Template ID from Email Templates
+    publicKey: 'eYKXtsYP5vAQpKmnt',     // Replace with your Public Key from EmailJS Account > API Keys
+    serviceId: 'service_4btme5c',     // Replace with your Service ID from Email Services
+    templateId: 'template_ad5aie9'   // Replace with your Template ID from Email Templates
   };
 
   // Check if credentials are still placeholders
