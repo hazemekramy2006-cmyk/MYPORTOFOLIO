@@ -369,37 +369,19 @@ function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
-  // IMPORTANT: Replace these with your actual EmailJS credentials from https://dashboard.emailjs.com/
-  // 1. Sign up at https://www.emailjs.com/
-  // 2. Add an Email Service (Gmail, Outlook, etc.)
-  // 3. Create an Email Template
-  // 4. Go to Account > API Keys and copy your Public Key
-  // 5. Replace the values below with your actual credentials
-
+  // EmailJS Configuration - Active credentials
   const EMAILJS_CONFIG = {
-    publicKey: 'eYKXtsYP5vAQpKmnt',     // Replace with your Public Key from EmailJS Account > API Keys
-    serviceId: 'service_4btme5c',     // Replace with your Service ID from Email Services
-    templateId: 'template_ad5aie9'   // Replace with your Template ID from Email Templates
+    publicKey: 'eYKXtsYP5vAQpKmnt',
+    serviceId: 'service_4btme5c',
+    templateId: 'template_ad5aie9'
   };
-
-  // Check if credentials are still placeholders
-  if (EMAILJS_CONFIG.publicKey === 'eYKXtsYP5vAQpKmnt' ||
-      EMAILJS_CONFIG.serviceId === 'service_4btme5c' ||
-      EMAILJS_CONFIG.templateId === 'template_ad5aie9') {
-    console.warn('EmailJS: Please configure your credentials in script.js before using the contact form.');
-    // Still attach the form handler but show a helpful message
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      showFormMessage('Contact form is not configured yet. Please set up your EmailJS credentials in script.js or email me directly at hazemekramy2006@gmail.com', 'error');
-    });
-    return;
-  }
 
   // Initialize EmailJS with the public key
   if (typeof emailjs !== 'undefined') {
     emailjs.init({ publicKey: EMAILJS_CONFIG.publicKey });
   } else {
     console.error('EmailJS SDK not loaded. Make sure the script tag is included in your HTML.');
+    showFormMessage('Email service is temporarily unavailable. Please contact me directly at hazemekramy2006@gmail.com', 'error');
     return;
   }
 
